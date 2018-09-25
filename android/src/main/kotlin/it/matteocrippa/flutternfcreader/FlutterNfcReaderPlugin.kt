@@ -65,7 +65,7 @@ class FlutterNfcReaderPlugin(val registrar: Registrar) : MethodCallHandler {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 nfcAdapter?.enableReaderMode(registrar.activity(), {
 
-                    resulter?.success(it.id.toString())
+                    resulter?.success(it.id)
                 },READER_FLAGS, null )
 
             }

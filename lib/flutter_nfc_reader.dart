@@ -11,7 +11,7 @@ class FlutterNfcReader {
   }
 
   static Future<String> get read async {
-    final String result = await _channel.invokeMethod('NfcRead');
+    final String result = (await _channel.invokeMethod('NfcRead')).toString();
     return result;
   }
 
